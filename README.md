@@ -29,7 +29,7 @@ Proporcionan varios mecanismos de creacion de objetos que incrementan la flexibi
 Explican como ensamblar objetos y clases en estructuras mas grandes, a la vez que se mantiene la flexibilidad y eficiencia de estas estructuras.
 * [Adapter](Estructural/Adapter.md)
 * [Bridge](Estructural/Bridge.md)
-* [Composite](Estructural/Composite.md)
+* [Composite](Estructural/COMPOSITE/Composite.md)
 * [Decorator](Estructural/Decorator.md)
 * [Facade](Estructural/Facade.md)
 * [Flyweight](Estructural/Flyweight.md)
