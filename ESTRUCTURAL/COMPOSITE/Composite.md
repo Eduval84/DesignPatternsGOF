@@ -1,7 +1,5 @@
-**COMPOSITE**
-* * * * *
-
-###Definicion
+# **COMPOSITE**
+## Definicion
 
 Permite componer objetos en estructuras de arbol para representar jerarquieas y trabajar como si fueran objetos individuales y composiciones de objetos de manera uniforme.
 
@@ -13,7 +11,7 @@ Popularidad:
 
 💚💚🖤
 * * * * *
-💡 Aplicabilidad
+## 💡Aplicabilidad
 
 *  **Usar el patron Composite cuando el modelo central de tu aplicación puede representarse en una estructura de objetos en forma de arbol.**
 
