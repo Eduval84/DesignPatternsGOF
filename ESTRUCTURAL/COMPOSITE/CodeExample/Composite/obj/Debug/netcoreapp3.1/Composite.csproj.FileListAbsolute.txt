@@ -1,0 +1,14 @@
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\obj\Debug\netcoreapp3.1\Composite.csproj.AssemblyReference.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\obj\Debug\netcoreapp3.1\Composite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\obj\Debug\netcoreapp3.1\Composite.AssemblyInfoInputs.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\obj\Debug\netcoreapp3.1\Composite.AssemblyInfo.cs
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\obj\Debug\netcoreapp3.1\Composite.csproj.CoreCompileInputs.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\bin\Debug\netcoreapp3.1\Composite.exe
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\bin\Debug\netcoreapp3.1\Composite.deps.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\bin\Debug\netcoreapp3.1\Composite.runtimeconfig.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\bin\Debug\netcoreapp3.1\Composite.runtimeconfig.dev.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\bin\Debug\netcoreapp3.1\Composite.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\bin\Debug\netcoreapp3.1\Composite.pdb
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\obj\Debug\netcoreapp3.1\Composite.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\obj\Debug\netcoreapp3.1\Composite.pdb
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\Composite\obj\Debug\netcoreapp3.1\Composite.genruntimeconfig.cache
