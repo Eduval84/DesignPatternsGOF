@@ -1,0 +1,14 @@
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\bin\Debug\netcoreapp3.1\CompositeExample.exe
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\bin\Debug\netcoreapp3.1\CompositeExample.deps.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\bin\Debug\netcoreapp3.1\CompositeExample.runtimeconfig.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\bin\Debug\netcoreapp3.1\CompositeExample.runtimeconfig.dev.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\bin\Debug\netcoreapp3.1\CompositeExample.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\bin\Debug\netcoreapp3.1\CompositeExample.pdb
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\obj\Debug\netcoreapp3.1\CompositeExample.csproj.AssemblyReference.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\obj\Debug\netcoreapp3.1\CompositeExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\obj\Debug\netcoreapp3.1\CompositeExample.AssemblyInfoInputs.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\obj\Debug\netcoreapp3.1\CompositeExample.AssemblyInfo.cs
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\obj\Debug\netcoreapp3.1\CompositeExample.csproj.CoreCompileInputs.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\obj\Debug\netcoreapp3.1\CompositeExample.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\obj\Debug\netcoreapp3.1\CompositeExample.pdb
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\COMPOSITE\CodeExample\CompositeExample\obj\Debug\netcoreapp3.1\CompositeExample.genruntimeconfig.cache
