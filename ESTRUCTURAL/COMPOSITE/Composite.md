@@ -1,5 +1,5 @@
 # **COMPOSITE**
-## Definicion
+## 📖Definicion
 
 Permite componer objetos en estructuras de arbol para representar jerarquieas y trabajar como si fueran objetos individuales y composiciones de objetos de manera uniforme.
 
@@ -10,6 +10,10 @@ Complejidad:
 Popularidad:
 
 💚💚🖤
+
+**Ejemplos de uso:** El patrón Composite es muy común en el código C#. Se utiliza a menudo para representar jerarquías de componentes de interfaz de usuario o el código que trabaja con gráficos.
+
+**Identificación:** El Composite es fácil de reconocer por los métodos de comportamiento que toman una instancia del mismo tipo abstracto/interfaz y lo hacen una estructura de árbol.
 * * * * *
 ## 💡 Aplicabilidad
 
@@ -30,6 +34,9 @@ Popularidad:
 3. El contenedor **composite o compuesto** es un elemento que tiene sub-elementos: hojas u otros contenedores. Un contenedor no conoce las clases concretas de sus hijos.Funciona con todos los sub-elementos únicamente a trave´s de la interfaz componente. Al recibir una solicitud, un contenedor  delega el traajo a sus sub-elementos, procesa los resultados yintermedios y devuelve el resultado final al cliente.
 4. El **Cliente** funciona como todos los elementos a través de la interfaz component. Como resultado, el cliente puede fucnonar de la misma manera tanto con elementos simpñles como comjelos de árbol.
 
+
+[Ejemplo en c#](ESTRUCTURAL\COMPOSITE\CodeExample\Composite\Composite.sln)
+
 * * * * *
 ## ⚖ Pros y Contras
 
@@ -38,3 +45,4 @@ Popularidad:
 ✔ Principio de abierto/cerrado. Puedes introducir nuevos tipos de elemento en la aplicación sin descomponer el código existente, que ahora funciona con el árbol de objetos. 
 
 ❌ Puede resultar difícil proporcionar una interfaz común para clases cuya funcionalidad difiere demasiado. En algunos casos, tendrás que generalizar en exceso la interfaz componente, provocando que sea más difícil de comprender.
+
