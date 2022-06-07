@@ -35,7 +35,9 @@ Popularidad:
 4. El **Cliente** funciona como todos los elementos a través de la interfaz component. Como resultado, el cliente puede fucnonar de la misma manera tanto con elementos simpñles como comjelos de árbol.
 
 
-[Ejemplo en c#](ESTRUCTURAL\COMPOSITE\CodeExample\Composite\Composite.sln)
+[Ejemplo del UML en c#](CodeExample\Composite\Component.cs)
+
+[Ejemplo practico en c#](CodeExample\CompositeExample\INode.cs)
 
 * * * * *
 ## ⚖ Pros y Contras
