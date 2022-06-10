@@ -21,19 +21,28 @@ Popularidad:
 
    ⚡ *  El patrón adapter te permite crear una clase intermediaria que sirva como traductora entre tu código y una clase heredada, una clase de un tercero o cualqueir otra clase con una interfaz extraña.
 
-* **Utila el patrón cuando quieras que el código cliente trate elementos simples y compejos de la misma forma**
+* **Utila el patrón cuando quieras reutilizar varias subclases existentes que carezcan de alguna funcionalidad común que no pueda añadirse a la superclase.**
 
-   ⚡ *  Al compartir un interfaz común el cliente no tiene que preocuparse por la clase concreta de los objetos con los que funciona.
+   ⚡ *  Puedes extender cada subclase y colocar la funcionalidad que falta, dentro de las nuevas clases hijas. No obstante, deberás suplicar el código en todas esas nuevas clases, lo cual **huele muy mal**. La solucion mas elegante es colocar la funcionalidad que falta dentro de una clase adaptadora, después puedes envolver obbjetos a los que les falten fucniones, dentro de la clase adaptadora, obteniendo esas funciones necesarias de un modo dinámico. Para que esto funcione deben tener una interfaz comun y el campo de la clase adaptadora debe seguir dicha interfaz. Este comportamiento es muy similar al del patrón **Decorator**.
 * * * * *
 ## Estructura
 
-![](https://refactoring.guru/images/patterns/diagrams/composite/structure-es.png)
+### Adaptador de objetos
 
-1. La interfaz **Component** describe el metodo *'excute()'*, que sera comun a elemntos simples y complejos del arbol.
-2. La **hoja o leaf** es un elemento básico de un arbol que no tiene sub-elementos. Normalmente, los componentes de la hoja acaban realizando la mayoria del trabajo real, ya que no tienen a nadie a quien delegarle el trabajo.
-3. El contenedor **composite o compuesto** es un elemento que tiene sub-elementos: hojas u otros contenedores. Un contenedor no conoce las clases concretas de sus hijos.Funciona con todos los sub-elementos únicamente a trave´s de la interfaz componente. Al recibir una solicitud, un contenedor  delega el traajo a sus sub-elementos, procesa los resultados yintermedios y devuelve el resultado final al cliente.
-4. El **Cliente** funciona como todos los elementos a través de la interfaz component. Como resultado, el cliente puede fucnonar de la misma manera tanto con elementos simpñles como comjelos de árbol.
+![](https://refactoring.guru/images/patterns/diagrams/adapter/structure-object-adapter.png)
 
+1. La clase cliente contiene la logica de negocio existente del programa.
+2. 
+
+### Clase adaptadora
+
+Esta implementación utiliza la herencia, porque la clase adaptadora hereda interfaces de ambos objetos al mismo tiempo. Ten en cuenta que esta opción sólo puede implementarse en lenguajes de programación que soporten la herencia múltiple, como C++.
+
+
+![](https://refactoring.guru/images/patterns/diagrams/adapter/structure-class-adapter.png)
+
+1. La **clase adaptadora** no necesita envolver objetos porque hereda comportamientos tando de la clase cliente como de la clase de servicio. La adaptacion tiene lugar dentro de los métodos dsobreescritos. La clase adaptadora resultante puede utilzarse en lugar de una clase cliente existente.
+****
 
 [Ejemplo del UML en c#](CodeExample\Composite\Component.cs)
 
@@ -42,8 +51,8 @@ Popularidad:
 * * * * *
 ## ⚖ Pros y Contras
 
-✔ Puedes trabajar con estructuras de árbol complejas con mayor comodidad: utiliza el polimorfismo y la recursión en tu favor.
+✔ Principio de responsabilidad única. Puedes separar la interfaz o el código de conversión de datos de la lógica de negocio primaria del programa.
 
-✔ Principio de abierto/cerrado. Puedes introducir nuevos tipos de elemento en la aplicación sin descomponer el código existente, que ahora funciona con el árbol de objetos. 
+✔ Principio de abierto/cerrado. Puedes introducir nuevos tipos de adaptadores al programa sin descomponer el código cliente existente, siempre y cuando trabajen con los adaptadores a través de la interfaz con el cliente. 
 
-❌ Puede resultar difícil proporcionar una interfaz común para clases cuya funcionalidad difiere demasiado. En algunos casos, tendrás que generalizar en exceso la interfaz componente, provocando que sea más difícil de comprender.
+❌ La complejidad general del código aumenta, ya que debes introducir un grupo de nuevas interfaces y clases. En ocasiones resulta más sencillo cambiar la clase de servicio de modo que coincida con el resto de tu código.
