@@ -11,7 +11,7 @@ Popularidad:
 
 💚💚💚
 
-**Ejemplos de uso:** El patrón Composite es muy común en el código C#. Se utiliza a menudo en sistemas basados en algún codigo heredado. En estos casos, los adaptadores crean código heredado con clases modernas.
+**Ejemplos de uso:** El patrón Adapter es muy común en el código C#. Se utiliza a menudo en sistemas basados en algún codigo heredado. En estos casos, los adaptadores crean código heredado con clases modernas.
 
 **Identificación:** Es reconocible por un constructor que toma una instancia de distindo tipo de clase abstracta/interfaz. Cuando el adaptador recibe una llamada a uno de sus métodos, convierte los parámetros al formato adecuado y despues dirige la llamada a uno o varios métodos del objeto envuelto.
 * * * * *
@@ -32,7 +32,10 @@ Popularidad:
 ![](https://refactoring.guru/images/patterns/diagrams/adapter/structure-object-adapter.png)
 
 1. La clase cliente contiene la logica de negocio existente del programa.
-2. 
+2. La interfaz con el cliente describe un protoclo que otras clases deben seguir par poder colaborar con el código cliente.
+3. Servicio es alguna clase útil (normalmente de una tercera parte o heredada). El cliente no puede utilizar directamete esta clase porque tiene una interfaz incompatible.
+4. La clase adaptadora es capaz de trabajar tanto con la clase cliente como contra la clase de servicio ya que implementa la interfaz con el cliente, mientras en vuelve el objeto de la clase de servicio. La clase adaptadora recibe llamadas del cliente a través de la interfaz adaptadora y las traduce en llamadas al objetyo envuelto de la clase de servicio, pero en un formato que pueda comprender.
+5. El código cliente no se acopla a la clase adaptadora concreta siempre y cuando funcione con la clase adaptadora a través de la interfaz con el cliente. Gracias a esto puedes introducir nuevos tipos de adaptadores en el programa sin descomponer el código cliente existente. Esto puede resultar muy útil cuando la interfaz de la clase de servicio se cambia o sustituye, ya que puedes crear una nueva clase adaptadora sin cambiar el código cliente.
 
 ### Clase adaptadora
 
@@ -56,3 +59,4 @@ Esta implementación utiliza la herencia, porque la clase adaptadora hereda inte
 ✔ Principio de abierto/cerrado. Puedes introducir nuevos tipos de adaptadores al programa sin descomponer el código cliente existente, siempre y cuando trabajen con los adaptadores a través de la interfaz con el cliente. 
 
 ❌ La complejidad general del código aumenta, ya que debes introducir un grupo de nuevas interfaces y clases. En ocasiones resulta más sencillo cambiar la clase de servicio de modo que coincida con el resto de tu código.
+
