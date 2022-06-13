@@ -10,16 +10,16 @@ namespace AdapterStructuralCode
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            //Codigo original heredado con dependencias
-            Customer customer = new Customer();
-            customer.FirstName();
+            //Codigo original o clase existente
+            ExistingClass existingClass = new ExistingClass();
+            existingClass.FirstName();
 
             //Esperando por el usuario
             Console.ReadKey();
 
             //Creando el adaptador y añadiendole un método
-            Customer customerAdapter = new Adapter();
-            customerAdapter.FirstName();
+            ExistingClass existingClassAdapter = new Adapter();
+            existingClassAdapter.FirstName();
 
         }
     }
@@ -27,15 +27,15 @@ namespace AdapterStructuralCode
     /// <summary>
     /// La clase cliente
     /// </summary>
-    internal class Customer
+    internal class ExistingClass
     {
         public virtual void FirstName()
         {
-            Console.WriteLine("Llamando al metodo FirstName de la clase Customer");
+            Console.WriteLine("Llamando al metodo de la clase original");
         }
     }
 
-    internal class Adapter : Customer
+    internal class Adapter : ExistingClass
     {
         private Adaptee adaptee = new Adaptee();
 
@@ -50,7 +50,7 @@ namespace AdapterStructuralCode
     {
         public void SpecificFirstName()
         {
-            Console.WriteLine("Llamando al metodo especifico ");
+            Console.WriteLine("Llamando al metodo especifico de la clase adaptada");
         }
     }
 }
