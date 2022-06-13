@@ -1,0 +1,14 @@
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\obj\Debug\netcoreapp3.1\AdapterStructuralCode.csproj.AssemblyReference.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\obj\Debug\netcoreapp3.1\AdapterStructuralCode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\obj\Debug\netcoreapp3.1\AdapterStructuralCode.AssemblyInfoInputs.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\obj\Debug\netcoreapp3.1\AdapterStructuralCode.AssemblyInfo.cs
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\obj\Debug\netcoreapp3.1\AdapterStructuralCode.csproj.CoreCompileInputs.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\bin\Debug\netcoreapp3.1\AdapterStructuralCode.exe
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\bin\Debug\netcoreapp3.1\AdapterStructuralCode.deps.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\bin\Debug\netcoreapp3.1\AdapterStructuralCode.runtimeconfig.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\bin\Debug\netcoreapp3.1\AdapterStructuralCode.runtimeconfig.dev.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\bin\Debug\netcoreapp3.1\AdapterStructuralCode.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\bin\Debug\netcoreapp3.1\AdapterStructuralCode.pdb
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\obj\Debug\netcoreapp3.1\AdapterStructuralCode.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\obj\Debug\netcoreapp3.1\AdapterStructuralCode.pdb
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\obj\Debug\netcoreapp3.1\AdapterStructuralCode.genruntimeconfig.cache
