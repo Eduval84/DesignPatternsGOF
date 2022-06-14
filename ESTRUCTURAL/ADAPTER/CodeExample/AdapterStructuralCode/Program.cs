@@ -2,55 +2,51 @@
 
 namespace AdapterStructuralCode
 {
-    internal class Program
+    // The Target defines the domain-specific interface used by the client code.
+    public interface ITarget
     {
-        /// <summary>
-        /// Adapter Desing Pattern, ejemplo de estructura de código 
-        /// </summary>
-        /// <param name="args"></param>
+        string GetRequest();
+    }
+
+    // The Adaptee contains some useful behavior, but its interface is
+    // incompatible with the existing client code. The Adaptee needs some
+    // adaptation before the client code can use it.
+    class Adaptee
+    {
+        public string GetSpecificRequest()
+        {
+            return "Specific request.";
+        }
+    }
+
+    // The Adapter makes the Adaptee's interface compatible with the Target's
+    // interface.
+    class Adapter : ITarget
+    {
+        private readonly Adaptee _adaptee;
+
+        public Adapter(Adaptee adaptee)
+        {
+            this._adaptee = adaptee;
+        }
+
+        public string GetRequest()
+        {
+            return $"This is '{this._adaptee.GetSpecificRequest()}'";
+        }
+    }
+
+    class Program
+    {
         static void Main(string[] args)
         {
-            //Codigo original o clase existente
-            //ExistingClass existingClass = new ExistingClass();
-            //existingClass.ExistingMethod();
+            Adaptee adaptee = new Adaptee();
+            ITarget target = new Adapter(adaptee);
 
-            //Creando el adaptador para poder tratarlo igual que el original
-            ExistingClass existingClass = new Adapter();
-            existingClass.ExistingMethod();
+            Console.WriteLine("Adaptee interface is incompatible with the client.");
+            Console.WriteLine("But with adapter client can call it's method.");
 
-            //Esperando por el usuario
-            Console.ReadKey();
-
-        }
-    }
-
-    /// <summary>
-    /// La clase cliente
-    /// </summary>
-    internal class ExistingClass
-    {
-        public virtual void ExistingMethod()
-        {
-            Console.WriteLine("Llamando al metodo de la clase original");
-        }
-    }
-
-    internal class Adapter : ExistingClass
-    {
-        private Adaptee adaptee = new Adaptee();
-
-        public override void ExistingMethod()
-        {
-            //Posibilidad de hacer otro trabajo y despues llamar al metodo especifico
-            adaptee.SpecificExistingMethod();
-        }
-    }
-
-    internal class Adaptee
-    {
-        public void SpecificExistingMethod()
-        {
-            Console.WriteLine("Llamando al metodo especifico de la clase adaptada");
+            Console.WriteLine(target.GetRequest());
         }
     }
 }
