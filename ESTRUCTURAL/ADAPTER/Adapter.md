@@ -47,9 +47,9 @@ Esta implementación utiliza la herencia, porque la clase adaptadora hereda inte
 1. La **clase adaptadora** no necesita envolver objetos porque hereda comportamientos tando de la clase cliente como de la clase de servicio. La adaptacion tiene lugar dentro de los métodos dsobreescritos. La clase adaptadora resultante puede utilzarse en lugar de una clase cliente existente.
 ****
 
-[Ejemplo del UML en c#](CodeExample\Composite\Component.cs)
+[Ejemplo estructural en c#](CodeExample\AdapterStructuralCode\Program.cs)
 
-[Ejemplo practico en c#](CodeExample\CompositeExample\INode.cs)
+[Ejemplo practico en c#](CodeExample\RealWorldExample\Program.cs)
 
 * * * * *
 ## ⚖ Pros y Contras

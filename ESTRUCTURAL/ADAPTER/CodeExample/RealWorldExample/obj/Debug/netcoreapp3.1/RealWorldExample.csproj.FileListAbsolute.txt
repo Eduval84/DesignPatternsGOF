@@ -1,0 +1,16 @@
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\bin\Debug\netcoreapp3.1\RealWorldExample.exe
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\bin\Debug\netcoreapp3.1\RealWorldExample.deps.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\bin\Debug\netcoreapp3.1\RealWorldExample.runtimeconfig.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\bin\Debug\netcoreapp3.1\RealWorldExample.runtimeconfig.dev.json
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\bin\Debug\netcoreapp3.1\RealWorldExample.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\bin\Debug\netcoreapp3.1\RealWorldExample.pdb
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.csproj.AssemblyReference.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.AssemblyInfoInputs.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.AssemblyInfo.cs
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.csproj.CoreCompileInputs.cache
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.csproj.CopyComplete
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.dll
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.pdb
+C:\Users\evalderrama\source\Cursos\Exeal\DesignPatternsGOF\ESTRUCTURAL\ADAPTER\CodeExample\RealWorldExample\RealWorldExample\obj\Debug\netcoreapp3.1\RealWorldExample.genruntimeconfig.cache
