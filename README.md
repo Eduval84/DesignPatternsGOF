@@ -27,7 +27,7 @@ Proporcionan varios mecanismos de creacion de objetos que incrementan la flexibi
 
 ## Patrones Estructurales
 Explican como ensamblar objetos y clases en estructuras mas grandes, a la vez que se mantiene la flexibilidad y eficiencia de estas estructuras.
-* [Adapter](Estructural/ADAPTER/Adapter.md)
+* [Adapter](ESTRUCTURAL/ADAPTER/Adapter.md)
 * [Bridge](Estructural/Bridge.md)
 * [Composite](ESTRUCTURAL/COMPOSITE/Composite.md)
 * [Decorator](Estructural/Decorator.md)
