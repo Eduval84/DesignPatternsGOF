@@ -23,7 +23,7 @@ Popularidad:
 
 * **Utila el patrón cuando quieras reutilizar varias subclases existentes que carezcan de alguna funcionalidad común que no pueda añadirse a la superclase.**
 
-   ⚡ *  Puedes extender cada subclase y colocar la funcionalidad que falta, dentro de las nuevas clases hijas. No obstante, deberás suplicar el código en todas esas nuevas clases, lo cual **huele muy mal**. La solucion mas elegante es colocar la funcionalidad que falta dentro de una clase adaptadora, después puedes envolver obbjetos a los que les falten fucniones, dentro de la clase adaptadora, obteniendo esas funciones necesarias de un modo dinámico. Para que esto funcione deben tener una interfaz comun y el campo de la clase adaptadora debe seguir dicha interfaz. Este comportamiento es muy similar al del patrón **Decorator**.
+   ⚡ *  Puedes extender cada subclase y colocar la funcionalidad que falta, dentro de las nuevas clases hijas. No obstante, deberás duplicar el código en todas esas nuevas clases, lo cual **huele muy mal**. La solucion mas elegante es colocar la funcionalidad que falta dentro de una clase adaptadora, después puedes envolver obbjetos a los que les falten fucniones, dentro de la clase adaptadora, obteniendo esas funciones necesarias de un modo dinámico. Para que esto funcione deben tener una interfaz comun y el campo de la clase adaptadora debe seguir dicha interfaz. Este comportamiento es muy similar al del patrón **Decorator**.
 * * * * *
 ## Estructura
 
@@ -44,7 +44,7 @@ Esta implementación utiliza la herencia, porque la clase adaptadora hereda inte
 
 ![](https://refactoring.guru/images/patterns/diagrams/adapter/structure-class-adapter.png)
 
-1. La **clase adaptadora** no necesita envolver objetos porque hereda comportamientos tando de la clase cliente como de la clase de servicio. La adaptacion tiene lugar dentro de los métodos dsobreescritos. La clase adaptadora resultante puede utilzarse en lugar de una clase cliente existente.
+1. La **clase adaptadora** no necesita envolver objetos porque hereda comportamientos tanto de la clase cliente como de la clase de servicio. La adaptacion tiene lugar dentro de los métodos dsobreescritos. La clase adaptadora resultante puede utilzarse en lugar de una clase cliente existente.
 ****
 
 [Ejemplo estructural en c#](CodeExample\AdapterStructuralCode\Program.cs)
