@@ -11,9 +11,13 @@ Popularidad:
 
 💚💚💚
 
-**Ejemplos de uso:** El patrón Adapter es muy común en el código C#. Se utiliza a menudo en sistemas basados en algún codigo heredado. En estos casos, los adaptadores crean código heredado con clases modernas.
+**Ejemplos de uso:** 
 
-**Identificación:** Es reconocible por un constructor que toma una instancia de distindo tipo de clase abstracta/interfaz. Cuando el adaptador recibe una llamada a uno de sus métodos, convierte los parámetros al formato adecuado y despues dirige la llamada a uno o varios métodos del objeto envuelto.
+El patrón Adapter es muy común en el código C#. Se utiliza a menudo en sistemas basados en algún codigo heredado. En estos casos, los adaptadores crean código heredado con clases modernas.
+
+**Identificación:**
+
+ Es reconocible por un constructor que toma una instancia de distindo tipo de clase abstracta/interfaz. Cuando el adaptador recibe una llamada a uno de sus métodos, convierte los parámetros al formato adecuado y despues dirige la llamada a uno o varios métodos del objeto envuelto.
 * * * * *
 ## 💡 Aplicabilidad
 
