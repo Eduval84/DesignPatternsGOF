@@ -45,20 +45,20 @@ El patrón Bridge se puede reconocer por una distinción clara entre alguna enti
 ## 💡 Aplicabilidad
 
 *  **Utiliza el patrón Bridge cuando quieras dividir y organizar una clase monolítica que tenga muchas variantes de una sola funcionalidad (por ejemplo, si la clase puede trabajar con diversos servidores de bases de datos).**
-*  
-  ⚡ * Conforme más crece una clase, más dificl es comprender como funciona y se tarda más tiempo en realizar un cambio. Cambiar una de las variaciones de la funcionalidad puede exigir realizar muchos cambios a toda la clase, lo que a menudo provoca que se cometan errores o no se aborden algunos efectos colaterales.
+   
+    ⚡ * Conforme más crece una clase, más dificl es comprender como funciona y se tarda más tiempo en realizar un cambio. Cambiar una de las variaciones de la funcionalidad puede exigir realizar muchos cambios a toda la clase, lo que a menudo provoca que se cometan errores o no se aborden algunos efectos colaterales.
 
-  Con el patron Bridge podemos dividir la clase monolitica en varias jerarquias de clase. Después, podemos cambiar las clases de cada jerajquia independientemente sin afectar a las otras. Esta solución simplifica el mantenimiento del código y minimiza el riesgo de descomponer el código existente.
+    Con el patron Bridge podemos dividir la clase monolitica en varias jerarquias de clase. Después, podemos cambiar las clases de cada jerajquia independientemente sin afectar a las otras. Esta solución simplifica el mantenimiento del código y minimiza el riesgo de descomponer el código existente.
 
-  *  **Utilizar el patrón cuando necesitemos extender una clase en varias dimensiones independientes.**
+*  **Utilizar el patrón cuando necesitemos extender una clase en varias dimensiones independientes.**
 
-  ⚡ * El patron Bridge sugiere que estraigamos una jerarquia de clase separa para cada una de las dimensiones. La clase original delega el trabajo relacionado a los objetos pertenecientes a dichas jerarquias, en vez de hacerlo todo ella por su cuenta.
+    ⚡ * El patron Bridge sugiere que estraigamos una jerarquia de clase separa para cada una de las dimensiones. La clase original delega el trabajo relacionado a los objetos pertenecientes a dichas jerarquias, en vez de hacerlo todo ella por su cuenta.
 
-  *  **Utilizar el patrón cuando necesitemos poder cambiar implementaciones durante el tiempo de ejecución.**
+*  **Utilizar el patrón cuando necesitemos poder cambiar implementaciones durante el tiempo de ejecución.**
 
- ⚡ * Aunque es opcional, el patrón Bridge te permite sustituir el objeto de implementación dentro de la abstracción. Es tan sencillo como asignar un nuevo valor a un campo.
+    ⚡ * Aunque es opcional, el patrón Bridge te permite sustituir el objeto de implementación dentro de la abstracción. Es tan sencillo como asignar un nuevo valor a un campo.
 
-Por cierto, este último punto es la razón principal por la que tanta gente confunde el patrón Bridge con el patrón Strategy. Recuerda que un patrón es algo más que un cierto modo de estructurar tus clases. También puede comunicar intención y el tipo de problema que se está abordando.
+    Por cierto, este último punto es la razón principal por la que tanta gente confunde el patrón Bridge con el patrón Strategy. Recuerda que un patrón es algo más que un cierto modo de estructurar tus clases. También puede comunicar intención y el tipo de problema que se está abordando.
 * * * * *
 ## Estructura
 

@@ -51,13 +51,13 @@ El patrón Adapter es muy común en el código C#. Se utiliza a menudo en sistem
 * * * * *
 ## 💡 Aplicabilidad
 
-*  **Utiliza la clase adaptadora cuando quieras usar  una clase existente, pero cuya ingerfaz no sea compatible con el resto del código**
+*  **Utiliza la clase adaptadora cuando quieras usar una clase existente, pero cuya interfaz no sea compatible con el resto del código**
 
    ⚡ *  El patrón adapter te permite crear una clase intermediaria que sirva como traductora entre tu código y una clase heredada, una clase de un tercero o cualqueir otra clase con una interfaz extraña.
 
 * **Utila el patrón cuando quieras reutilizar varias subclases existentes que carezcan de alguna funcionalidad común que no pueda añadirse a la superclase.**
 
-   ⚡ *  Puedes extender cada subclase y colocar la funcionalidad que falta, dentro de las nuevas clases hijas. No obstante, deberás duplicar el código en todas esas nuevas clases, lo cual **huele muy mal**. La solucion mas elegante es colocar la funcionalidad que falta dentro de una clase adaptadora, después puedes envolver obbjetos a los que les falten fucniones, dentro de la clase adaptadora, obteniendo esas funciones necesarias de un modo dinámico. Para que esto funcione deben tener una interfaz comun y el campo de la clase adaptadora debe seguir dicha interfaz. Este comportamiento es muy similar al del patrón **Decorator**.
+   ⚡ *  Puedes extender cada subclase y colocar la funcionalidad que falta, dentro de las nuevas clases hijas. No obstante, deberás duplicar el código en todas esas nuevas clases, lo cual **huele muy mal**. La solucion mas elegante es colocar la funcionalidad que falta dentro de una clase adaptadora, después puedes envolver en objetos a los que les falten funciones, dentro de la clase adaptadora, obteniendo esas funciones necesarias de un modo dinámico. Para que esto funcione deben tener una interfaz comun y el campo de la clase adaptadora debe seguir dicha interfaz. Este comportamiento es muy similar al del patrón **Decorator**.
 * * * * *
 ## Estructura
 

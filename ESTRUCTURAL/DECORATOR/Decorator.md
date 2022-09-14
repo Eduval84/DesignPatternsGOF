@@ -1,7 +1,7 @@
 # **Decorator**
 ## 📖Definicón
 
-Permite añadir dinámicamente nuevos comportamientos a objetos colocándolos dentro de objetos especiales que los envuelven (_wrappers_). Utilizando decoradores puedes envolver objetos tantas veces como necesites, ya que los objetos objetivo y los decoradores siguen la misma interfaz. El objeto resultante obtendrá un comportamiento de apliado de todos los wrappers.
+Permite añadir dinámicamente nuevos comportamientos a objetos colocándolos dentro de objetos especiales que los envuelven (_wrappers_). Utilizando decoradores puedes envolver objetos tantas veces como necesites, ya que los objetos objetivo y los decoradores siguen la misma interfaz. El objeto resultante obtendrá un comportamiento de apilado de todos los wrappers.
 
 Complejidad
 
