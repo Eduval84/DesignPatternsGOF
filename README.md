@@ -28,12 +28,12 @@ Proporcionan varios mecanismos de creacion de objetos que incrementan la flexibi
 ## Patrones Estructurales
 Explican como ensamblar objetos y clases en estructuras mas grandes, a la vez que se mantiene la flexibilidad y eficiencia de estas estructuras.
 * [Adapter](ESTRUCTURAL/ADAPTER/Adapter.md)
-* [Bridge](Estructural/Bridge.md)
+* [Bridge](Estructural/BRIDGE/Bridge.md)
 * [Composite](ESTRUCTURAL/COMPOSITE/Composite.md)
-* [Decorator](Estructural/Decorator.md)
-* [Facade](Estructural/Facade.md)
-* [Flyweight](Estructural/Flyweight.md)
-* [Proxy](Estructural/Proxy.md)
+* [Decorator](Estructural/DECORATOR/Decorator.md)
+* [Facade](Estructural/FACADE/Facade.md)
+* [Flyweight](Estructural/FLYWEIGTH/Flyweight.md)
+* [Proxy](Estructural/PROXY/Proxy.md)
 
 ## Patrones de comportamiento
 Tratan con algoritmos y la asignacion de responsabilidades dentre objetos.
