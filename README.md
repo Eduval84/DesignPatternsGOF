@@ -32,7 +32,7 @@ Explican como ensamblar objetos y clases en estructuras mas grandes, a la vez qu
 * [Composite](ESTRUCTURAL/COMPOSITE/Composite.md)
 * [Decorator](ESTRUCTURAL/DECORATOR/Decorator.md)
 * [Facade](ESTRUCTURAL/FACADE/Facade.md)
-* [Flyweight](ESTRUCTURAL/FLYWEIGTH/Flyweight.md)
+* [Flyweight](ESTRUCTURAL/FLYWEIGHT/Flyweight.md)
 * [Proxy](ESTRUCTURAL/PROXY/Proxy.md)
 
 ## Patrones de comportamiento
