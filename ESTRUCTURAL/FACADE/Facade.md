@@ -71,9 +71,9 @@ Un ejemplo de aislamiento de múltiples dependencias dentro de una única clase 
 
 En lugar de hacer que tu código trabaje con decenas de las clases del framework directamente, creas una clase fachada que encapsula esa funcionalidad y la esconde del resto del código. Esta estructura también te ayuda a minimizar el esfuerzo de actualizar a futuras versiones del framework o de sustituirlo por otro. Lo único que tendrías que cambiar en la aplicación es la implementación de los métodos de la fachada.
 
-[Ejemplo estructural (pseudocoódigo) en c#](CodeExample\RealWorldExample\Facade.cs)
+[Ejemplo estructural (pseudocoódigo) en c#](CodeExample/RealWorldExample/Facade.cs)
 
-[Ejemplo real en c#](CodeExample\Facade\FacadeConceptualExample.cs)
+[Ejemplo real en c#](CodeExample/Facade/FacadeConceptualExample.cs)
 
 * * * * *
 ## ⚖ Pros y Contras

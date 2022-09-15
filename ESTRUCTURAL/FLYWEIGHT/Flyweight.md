@@ -89,9 +89,9 @@ El patrón extrae el estado intrínseco repetido de una clase principal Árbol y
 
 Ahora, en lugar de almacenar la misma información en varios objetos, se mantiene en unos pocos objetos flyweight vinculados a los objetos de Árbol adecuados que actúan como contexto. El código cliente crea nuevos objetos árbol utilizando la fábrica flyweight, que encapsula la complejidad de buscar el objeto adecuado y reutilizarlo si es necesario.
 
-[Ejemplo estructural (pseudocoódigo) en c#](CodeExample\RealWorldExample\Flyweight.cs)
+[Ejemplo estructural (pseudocoódigo) en c#](CodeExample/RealWorldExample/Flyweight.cs)
 
-[Ejemplo real en c#](CodeExample\Flyweight\FlyweightConceptualExample.cs)
+[Ejemplo real en c#](CodeExample/Flyweight/FlyweightConceptualExample.cs)
 
 * * * * *
 ## ⚖ Pros y Contras

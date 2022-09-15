@@ -109,9 +109,9 @@ Después de que los datos son leídos del disco, pasan por los mismos decoradore
 
 Los decoradores y la clase fuente de datos implementan la misma interfaz, lo que los hace intercambiables en el código cliente.
 
-[Ejemplo estructural (pseudocoódigo) en c#](CodeExample\RealWorldExample\Decorator.cs)
+[Ejemplo estructural (pseudocoódigo) en c#](CodeExample/RealWorldExample/Decorator.cs)
 
-[Ejemplo real en c#](CodeExample\Decorator\DecoratorConceptualExample.cs)
+[Ejemplo real en c#](CodeExample/Decorator/DecoratorConceptualExample.cs)
 
 * * * * *
 ## ⚖ Pros y Contras

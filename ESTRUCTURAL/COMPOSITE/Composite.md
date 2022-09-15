@@ -61,9 +61,9 @@ La gran ventaja de esta solución es que no tienes que preocuparte por las clase
 4. El **Cliente** funciona como todos los elementos a través de la interfaz component. Como resultado, el cliente puede fucnonar de la misma manera tanto con elementos simpñles como comjelos de árbol.
 
 
-[Ejemplo del UML en c#](CodeExample\Composite\Component.cs)
+[Ejemplo del UML en c#](CodeExample/Composite/Component.cs)
 
-[Ejemplo practico en c#](CodeExample\CompositeExample\INode.cs)
+[Ejemplo practico en c#](CodeExample/CompositeExample/INode.cs)
 
 * * * * *
 ## ⚖ Pros y Contras
