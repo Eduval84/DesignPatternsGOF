@@ -81,9 +81,9 @@ Esta implementación utiliza la herencia, porque la clase adaptadora hereda inte
 1. La **clase adaptadora** no necesita envolver objetos porque hereda comportamientos tanto de la clase cliente como de la clase de servicio. La adaptacion tiene lugar dentro de los métodos dsobreescritos. La clase adaptadora resultante puede utilzarse en lugar de una clase cliente existente.
 ****
 
-[Ejemplo estructural en c#](ESTRUCTURAL\ADAPTER\CodeExample\AdapterStructuralCode\Program.cs)
+[Ejemplo estructural en c#](https://github.com/Eduval84/DesignPatternsGOF/blob/main/ESTRUCTURAL/ADAPTER/CodeExample/AdapterStructuralCode/Program.cs)
 
-[Ejemplo practico en c#](ESTRUCTURAL\ADAPTER\RealWorldExample\Program.cs)
+[Ejemplo practico en c#]([CodeExample](https://github.com/Eduval84/DesignPatternsGOF/blob/main/ESTRUCTURAL/ADAPTER/CodeExample/RealWorldExample/Program.cs)
 
 * * * * *
 ## ⚖ Pros y Contras
