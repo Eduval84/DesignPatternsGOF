@@ -74,9 +74,9 @@ El patrón Bridge se puede reconocer por una distinción clara entre alguna enti
 
 ![](https://refactoring.guru/images/patterns/diagrams/bridge/example-es.png)
 
-[Ejemplo estructural en c#](CodeExample\BridgeStructuralCode\Program.cs)
+[Ejemplo estructural en c#](CodeExample/BridgeStructuralCode/Program.cs)
 
-[Ejemplo real en c#](CodeExample\RealWorldExample\Program.cs)
+[Ejemplo real en c#](CodeExample/RealWorldExample/Program.cs)
 
 * * * * *
 ## ⚖ Pros y Contras

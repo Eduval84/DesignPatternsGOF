@@ -83,7 +83,7 @@ Esta implementación utiliza la herencia, porque la clase adaptadora hereda inte
 
 [Ejemplo estructural en c#](https://github.com/Eduval84/DesignPatternsGOF/blob/main/ESTRUCTURAL/ADAPTER/CodeExample/AdapterStructuralCode/Program.cs)
 
-[Ejemplo practico en c#]([CodeExample](https://github.com/Eduval84/DesignPatternsGOF/blob/main/ESTRUCTURAL/ADAPTER/CodeExample/RealWorldExample/Program.cs)
+[Ejemplo practico en c#](https://github.com/Eduval84/DesignPatternsGOF/blob/main/ESTRUCTURAL/ADAPTER/CodeExample/RealWorldExample/Program.cs)
 
 * * * * *
 ## ⚖ Pros y Contras
