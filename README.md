@@ -37,17 +37,17 @@ Explican como ensamblar objetos y clases en estructuras mas grandes, a la vez qu
 
 ## Patrones de comportamiento
 Tratan con algoritmos y la asignacion de responsabilidades dentre objetos.
-* [Chain of Responsibility](Comportamiento/ChainOfResponsibility.md)
-* [Command](Comportamiento/Command.md)
-* [Interpreter](Comportamiento/Interpreter.md)
-* [Iterator](Comportamiento/Iterator.md)
-* [Mediator](Comportamiento/Mediator.md)
-* [Memento](Comportamiento/Memento.md)
-* [Observer](Comportamiento/Observer.md)
-* [State](Comportamiento/State.md)
-* [Strategy](Comportamiento/Strategy.md)
-* [Template Method](Comportamiento/TemplateMethod.md)
-* [Visitor](Comportamiento/Visitor.md)
+* [Chain of Responsibility](COMPORTAMIENTO/CHAINOFRESPONSIBILITY/ChainOfResponsibility.md)
+* [Command](COMPORTAMIENTO/COMMAND/Command.md)
+* [Interpreter](COMPORTAMIENTO/Interpreter.md)
+* [Iterator](COMPORTAMIENTO/Iterator.md)
+* [Mediator](COMPORTAMIENTO/Mediator.md)
+* [Memento](COMPORTAMIENTO/Memento.md)
+* [Observer](COMPORTAMIENTO/Observer.md)
+* [State](COMPORTAMIENTO/State.md)
+* [Strategy](COMPORTAMIENTO/Strategy.md)
+* [Template Method](COMPORTAMIENTO/TemplateMethod.md)
+* [Visitor](COMPORTAMIENTO/Visitor.md)
 
 ## License
 * [RefactoringGuru](https://refactoring.guru/es/design-patterns/csharp)
