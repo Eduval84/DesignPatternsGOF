@@ -139,7 +139,7 @@ namespace RefactoringGuru.DesignPatterns.ChainOfResponsibility.Conceptual
     }
 }
 
-//RESULTADO DE LA EJECUCION
+//Output: Resultado de la ejecucion
 //Chain: Monkey > Squirrel > Dog
 
 //Client: Who wants a Nut?
