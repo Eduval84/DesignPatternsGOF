@@ -1,57 +1,89 @@
-// El originador contiene información importante que puede
-// cambiar con el paso del tiempo. También define un método para
-// guardar su estado dentro de un memento, y otro método para
-// restaurar el estado a partir de él.
+// La clase notificadora base incluye código de gestión de
+// suscripciones y métodos de notificación.
+class EventManager is
+    private field listeners: hash map of event types and listeners
+
+    method subscribe(eventType, listener) is
+        listeners.add(eventType, listener)
+
+    method unsubscribe(eventType, listener) is
+        listeners.remove(eventType, listener)
+
+    method notify(eventType, data) is
+        foreach (listener in listeners.of(eventType)) do
+            listener.update(data)
+
+// El notificador concreto contiene lógica de negocio real, de
+// interés para algunos suscriptores. Podemos derivar esta clase
+// de la notificadora base, pero esto no siempre es posible en
+// el mundo real porque puede que la notificadora concreta sea
+// ya una subclase. En este caso, puedes modificar la lógica de
+// la suscripción con composición, como hicimos aquí.
 class Editor is
-    private field text, curX, curY, selectionWidth
+    public field events: EventManager
+    private field file: File
 
-    method setText(text) is
-        this.text = text
+    constructor Editor() is
+        events = new EventManager()
 
-    method setCursor(x, y) is
-        this.curX = x
-        this.curY = y
+    // Los métodos de la lógica de negocio pueden notificar los
+    // cambios a los suscriptores.
+    method openFile(path) is
+        this.file = new File(path)
+        events.notify("open", file.name)
 
-    method setSelectionWidth(width) is
-        this.selectionWidth = width
+    method saveFile() is
+        file.write()
+        events.notify("save", file.name)
 
-    // Guarda el estado actual dentro de un memento.
-    method createSnapshot():Snapshot is
-        // El memento es un objeto inmutable; ese es el motivo
-        // por el que el originador pasa su estado a los
-        // parámetros de su constructor.
-        return new Snapshot(this, text, curX, curY, selectionWidth)
-
-// La clase memento almacena el estado pasado del editor.
-class Snapshot is
-    private field editor: Editor
-    private field text, curX, curY, selectionWidth
-
-    constructor Snapshot(editor, text, curX, curY, selectionWidth) is
-        this.editor = editor
-        this.text = text
-        this.curX = x
-        this.curY = y
-        this.selectionWidth = selectionWidth
-
-    // En cierto punto, puede restaurarse un estado previo del
-    // editor utilizando un objeto memento.
-    method restore() is
-        editor.setText(text)
-        editor.setCursor(curX, curY)
-        editor.setSelectionWidth(selectionWidth)
-
-// Un objeto de comando puede actuar como cuidador. En este
-// caso, el comando obtiene un memento justo antes de cambiar el
-// estado del originador. Cuando se solicita deshacer, restaura
-// el estado del originador a partir del memento.
-class Command is
-    private field backup: Snapshot
-
-    method makeBackup() is
-        backup = editor.createSnapshot()
-
-    method undo() is
-        if (backup != null)
-            backup.restore()
     // ...
+
+
+// Aquí está la interfaz suscriptora. Si tu lenguaje de
+// programación soporta tipos funcionales, puedes sustituir toda
+// la jerarquía suscriptora por un grupo de funciones.
+
+
+interface EventListener is
+    method update(filename)
+
+// Los suscriptores concretos reaccionan a las actualizaciones
+// emitidas por el notificador al que están unidos.
+class LoggingListener implements EventListener is
+    private field log: File
+    private field message: string
+
+    constructor LoggingListener(log_filename, message) is
+        this.log = new File(log_filename)
+        this.message = message
+
+    method update(filename) is
+        log.write(replace('%s',filename,message))
+
+class EmailAlertsListener implements EventListener is
+    private field email: string
+    private field message: string
+
+    constructor EmailAlertsListener(email, message) is
+        this.email = email
+        this.message = message
+
+    method update(filename) is
+        system.email(email, replace('%s',filename,message))
+
+
+// Una  aplicación puede configurar notificadores y suscriptores
+// durante el tiempo de ejecución.
+class Application is
+    method config() is
+        editor = new Editor()
+
+        logger = new LoggingListener(
+            "/path/to/log.txt",
+            "Someone has opened the file: %s")
+        editor.events.subscribe("open", logger)
+
+        emailAlerts = new EmailAlertsListener(
+            "admin@example.com",
+            "Someone has changed the file: %s")
+        editor.events.subscribe("save", emailAlerts)

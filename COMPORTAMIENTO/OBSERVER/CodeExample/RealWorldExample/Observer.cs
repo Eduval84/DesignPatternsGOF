@@ -1,169 +1,105 @@
-// ¿De qué clases se compone?
-// ¿Qué papeles juegan esas clases?
-// ¿De qué forma se relacionan los elementos del patrón?
+//Este ejemplo ilustra la estructura del patrón de diseño Observer. Se centra en responder las siguientes preguntas:
+
+//¿De qué clases se compone?
+//¿Qué papeles juegan esas clases?
+//¿De qué forma se relacionan los elementos del patrón?
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 
-namespace RefactoringGuru.DesignPatterns.Memento.Conceptual
+namespace RefactoringGuru.DesignPatterns.Observer.Conceptual
 {
-    // The Originator holds some important state that may change over time. It
-    // also defines a method for saving the state inside a memento and another
-    // method for restoring the state from it.
-    class Originator
+    public interface IObserver
     {
-        // For the sake of simplicity, the originator's state is stored inside a
-        // single variable.
-        private string _state;
+        // Receive update from subject
+        void Update(ISubject subject);
+    }
 
-        public Originator(string state)
+    public interface ISubject
+    {
+        // Attach an observer to the subject.
+        void Attach(IObserver observer);
+
+        // Detach an observer from the subject.
+        void Detach(IObserver observer);
+
+        // Notify all observers about an event.
+        void Notify();
+    }
+
+    // The Subject owns some important state and notifies observers when the
+    // state changes.
+    public class Subject : ISubject
+    {
+        // For the sake of simplicity, the Subject's state, essential to all
+        // subscribers, is stored in this variable.
+        public int State { get; set; } = -0;
+
+        // List of subscribers. In real life, the list of subscribers can be
+        // stored more comprehensively (categorized by event type, etc.).
+        private List<IObserver> _observers = new List<IObserver>();
+
+        // The subscription management methods.
+        public void Attach(IObserver observer)
         {
-            this._state = state;
-            Console.WriteLine("Originator: My initial state is: " + state);
+            Console.WriteLine("Subject: Attached an observer.");
+            this._observers.Add(observer);
         }
 
-        // The Originator's business logic may affect its internal state.
-        // Therefore, the client should backup the state before launching
-        // methods of the business logic via the save() method.
-        public void DoSomething()
+        public void Detach(IObserver observer)
         {
-            Console.WriteLine("Originator: I'm doing something important.");
-            this._state = this.GenerateRandomString(30);
-            Console.WriteLine($"Originator: and my state has changed to: {_state}");
+            this._observers.Remove(observer);
+            Console.WriteLine("Subject: Detached an observer.");
         }
 
-        private string GenerateRandomString(int length = 10)
+        // Trigger an update in each subscriber.
+        public void Notify()
         {
-            string allowedSymbols = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string result = string.Empty;
+            Console.WriteLine("Subject: Notifying observers...");
 
-            while (length > 0)
+            foreach (var observer in _observers)
             {
-                result += allowedSymbols[new Random().Next(0, allowedSymbols.Length)];
-
-                Thread.Sleep(12);
-
-                length--;
+                observer.Update(this);
             }
-
-            return result;
         }
 
-        // Saves the current state inside a memento.
-        public IMemento Save()
+        // Usually, the subscription logic is only a fraction of what a Subject
+        // can really do. Subjects commonly hold some important business logic,
+        // that triggers a notification method whenever something important is
+        // about to happen (or after it).
+        public void SomeBusinessLogic()
         {
-            return new ConcreteMemento(this._state);
-        }
+            Console.WriteLine("\nSubject: I'm doing something important.");
+            this.State = new Random().Next(0, 10);
 
-        // Restores the Originator's state from a memento object.
-        public void Restore(IMemento memento)
-        {
-            if (!(memento is ConcreteMemento))
-            {
-                throw new Exception("Unknown memento class " + memento.ToString());
-            }
+            Thread.Sleep(15);
 
-            this._state = memento.GetState();
-            Console.Write($"Originator: My state has changed to: {_state}");
+            Console.WriteLine("Subject: My state has just changed to: " + this.State);
+            this.Notify();
         }
     }
 
-    // The Memento interface provides a way to retrieve the memento's metadata,
-    // such as creation date or name. However, it doesn't expose the
-    // Originator's state.
-    public interface IMemento
+    // Concrete Observers react to the updates issued by the Subject they had
+    // been attached to.
+    class ConcreteObserverA : IObserver
     {
-        string GetName();
-
-        string GetState();
-
-        DateTime GetDate();
-    }
-
-    // The Concrete Memento contains the infrastructure for storing the
-    // Originator's state.
-    class ConcreteMemento : IMemento
-    {
-        private string _state;
-
-        private DateTime _date;
-
-        public ConcreteMemento(string state)
-        {
-            this._state = state;
-            this._date = DateTime.Now;
-        }
-
-        // The Originator uses this method when restoring its state.
-        public string GetState()
-        {
-            return this._state;
-        }
-        
-        // The rest of the methods are used by the Caretaker to display
-        // metadata.
-        public string GetName()
-        {
-            return $"{this._date} / ({this._state.Substring(0, 9)})...";
-        }
-
-        public DateTime GetDate()
-        {
-            return this._date;
+        public void Update(ISubject subject)
+        {            
+            if ((subject as Subject).State < 3)
+            {
+                Console.WriteLine("ConcreteObserverA: Reacted to the event.");
+            }
         }
     }
 
-    // The Caretaker doesn't depend on the Concrete Memento class. Therefore, it
-    // doesn't have access to the originator's state, stored inside the memento.
-    // It works with all mementos via the base Memento interface.
-    class Caretaker
+    class ConcreteObserverB : IObserver
     {
-        private List<IMemento> _mementos = new List<IMemento>();
-
-        private Originator _originator = null;
-
-        public Caretaker(Originator originator)
+        public void Update(ISubject subject)
         {
-            this._originator = originator;
-        }
-
-        public void Backup()
-        {
-            Console.WriteLine("\nCaretaker: Saving Originator's state...");
-            this._mementos.Add(this._originator.Save());
-        }
-
-        public void Undo()
-        {
-            if (this._mementos.Count == 0)
+            if ((subject as Subject).State == 0 || (subject as Subject).State >= 2)
             {
-                return;
-            }
-
-            var memento = this._mementos.Last();
-            this._mementos.Remove(memento);
-
-            Console.WriteLine("Caretaker: Restoring state to: " + memento.GetName());
-
-            try
-            {
-                this._originator.Restore(memento);
-            }
-            catch (Exception)
-            {
-                this.Undo();
-            }
-        }
-
-        public void ShowHistory()
-        {
-            Console.WriteLine("Caretaker: Here's the list of mementos:");
-
-            foreach (var memento in this._mementos)
-            {
-                Console.WriteLine(memento.GetName());
+                Console.WriteLine("ConcreteObserverB: Reacted to the event.");
             }
         }
     }
@@ -172,58 +108,41 @@ namespace RefactoringGuru.DesignPatterns.Memento.Conceptual
     {
         static void Main(string[] args)
         {
-            // Client code.
-            Originator originator = new Originator("Super-duper-super-puper-super.");
-            Caretaker caretaker = new Caretaker(originator);
+            // The client code.
+            var subject = new Subject();
+            var observerA = new ConcreteObserverA();
+            subject.Attach(observerA);
 
-            caretaker.Backup();
-            originator.DoSomething();
+            var observerB = new ConcreteObserverB();
+            subject.Attach(observerB);
 
-            caretaker.Backup();
-            originator.DoSomething();
+            subject.SomeBusinessLogic();
+            subject.SomeBusinessLogic();
 
-            caretaker.Backup();
-            originator.DoSomething();
+            subject.Detach(observerB);
 
-            Console.WriteLine();
-            caretaker.ShowHistory();
-
-            Console.WriteLine("\nClient: Now, let's rollback!\n");
-            caretaker.Undo();
-
-            Console.WriteLine("\n\nClient: Once more!\n");
-            caretaker.Undo();
-
-            Console.WriteLine();
+            subject.SomeBusinessLogic();
         }
     }
 }
 
-//Originator: My initial state is: Super-duper-super-puper-super.
 
-//Caretaker: Saving Originator's state...
-//Originator: I'm doing something important.
-Originator: and my state has changed to: oGyQIIatlDDWNgYYqJATTmdwnnGZQj
+//Output.txt: Resultado de la ejecución
+//Subject: Attached an observer.
+//Subject: Attached an observer.
 
-//Caretaker: Saving Originator's state...
-//Originator: I'm doing something important.
-//Originator: and my state has changed to: jBtMDDWogzzRJbTTmEwOOhZrjjBULe
+//Subject: I'm doing something important.
+//Subject: My state has just changed to: 2
+//Subject: Notifying observers...
+//ConcreteObserverA: Reacted to the event.
+//ConcreteObserverB: Reacted to the event.
 
-Caretaker: Saving Originator's state...
-Originator: I'm doing something important.
-Originator: and my state has changed to: exoHyyRkbuuNEXOhhArKccUmexPPHZ
+//Subject: I'm doing something important.
+//Subject: My state has just changed to: 1
+//Subject: Notifying observers...
+//ConcreteObserverA: Reacted to the event.
+//Subject: Detached an observer.
 
-Caretaker: Here's the list of mementos:
-12.06.2018 15:52:45 / (Super-dup...)
-12.06.2018 15:52:46 / (oGyQIIatl...)
-12.06.2018 15:52:46 / (jBtMDDWog...)
-
-Client: Now, let's rollback!
-
-Caretaker: Restoring state to: 12.06.2018 15:52:46 / (jBtMDDWog...)
-Originator: My state has changed to: jBtMDDWogzzRJbTTmEwOOhZrjjBULe
-
-Client: Once more!
-
-Caretaker: Restoring state to: 12.06.2018 15:52:46 / (oGyQIIatl...)
-Originator: My state has changed to: oGyQIIatlDDWNgYYqJATTmdwnnGZQj
+//Subject: I'm doing something important.
+//Subject: My state has just changed to: 5
+//Subject: Notifying observers...
