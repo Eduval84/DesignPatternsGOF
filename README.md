@@ -45,7 +45,7 @@ Tratan con algoritmos y la asignacion de responsabilidades dentre objetos.
 * [Memento](COMPORTAMIENTO/MEMENTO/Memento.md)
 * [Observer](COMPORTAMIENTO/OBSERVER/Observer.md)
 * [State](COMPORTAMIENTO/STATE/State.md)
-* [Strategy](COMPORTAMIENTO/Strategy.md)
+* [Strategy](COMPORTAMIENTO/STRATEGY/Strategy.md)
 * [Template Method](COMPORTAMIENTO/TemplateMethod.md)
 * [Visitor](COMPORTAMIENTO/Visitor.md)
 
