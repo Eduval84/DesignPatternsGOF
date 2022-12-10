@@ -13,7 +13,7 @@ Los patrones de diseño definen un lenguaje común que puedes utilizar con tus c
 ## Desventajas
 Maluso o un uso desmesurado, es un problema muy comun sobre todo cuando empiezas a aprender sobre patrones de diseño porque intentas aplicarlos en todas partes, incluso en situaciones en las que un codigo mas simple funciona bien. "El tipico ejemplo de que cuando tienes un martillo, todo son clavos"
 
-Desfasados o desactualizados, es decir hay patrones que han pasado a formar parte de las caracteristicas de los lenguajes por ejemplo hoy en dia el patrón **[Strategy](Comportamiento/Strategy.md)** puede implementarse con una simple función anónima (lambda) en la mayoría de lenguajes de programación modernos.
+Desfasados o desactualizados, es decir hay patrones que han pasado a formar parte de las caracteristicas de los lenguajes por ejemplo hoy en dia el patrón **[Strategy](COMPORTAMIENTO/STRATEGY/Strategy.md)** puede implementarse con una simple función anónima (lambda) en la mayoría de lenguajes de programación modernos.
 
 Soluciones ineficientes o cerradas sin margen de mejora, Los patrones intentan sistematizar soluciones cuyo uso ya es generalizado. Esta unificación es vista por muchos como un dogma, e implementan los patrones “al pie de la letra”, sin adaptarlos al contexto del proyecto particular.
 
